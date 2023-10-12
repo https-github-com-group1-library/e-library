@@ -1,0 +1,17 @@
+.hero{
+    height: 50%;
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+}
+.hero h2{
+    width: 50%;
+}
+
+.search-input{
+    width: 35%;
+}
+.search-input button{
+    background-color: #E55604;
+    color: white;
+}

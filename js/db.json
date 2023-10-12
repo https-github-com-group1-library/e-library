@@ -1,0 +1,294 @@
+{
+    "books": [
+      [
+          {
+            "id": 1,
+            "title": "Sapiens: A Brief History of Humankind",
+            "author": "Yuval Noah Harari",
+            "category": "Historical",
+            "rating": 4.7,
+            "release_date": 2011,
+            "pages": 443,
+            "language": "English",
+            "description": "Sapiens is a book about the history of humankind, from our Stone Age ancestors to the present day. It is a fascinating and thought-provoking read that will challenge your understanding of the world."
+          },
+          {
+            "id": 2,
+            "title": "A People's History of the United States",
+            "author": "Howard Zinn",
+            "category": "Historical",
+            "rating": 4.6,
+            "release_date": 1980,
+            "pages": 720,
+            "language": "English",
+            "description": "A People's History of the United States is a book that tells the history of the United States from the perspective of the working class and other marginalized groups. It is a challenging but important read that will help you to understand the country's past in a new way."
+          },
+          {
+            "id": 3,
+            "title": "Guns, Germs, and Steel: The Fates of Human Societies",
+            "author": "Jared Diamond",
+            "category": "Historical",
+            "rating": 4.7,
+            "release_date": 1997,
+            "pages": 480,
+            "language": "English",
+            "description": "Guns, Germs, and Steel is a book that explores the different ways in which human societies have developed over time. Diamond argues that the differences in development between different societies are due to environmental factors, such as the availability of resources and the presence of disease."
+          },
+          {
+            "id": 4,
+            "title": "The Second World War",
+            "author": "Antony Beevor",
+            "category": "Historical",
+            "rating": 4.7,
+            "release_date": 2012,
+            "pages": 945,
+            "language": "English",
+            "description": "The Second World War is a comprehensive history of the Second World War, written by one of the world's leading military historians. It is a must-read for anyone who wants to understand this defining conflict in the 20th century."
+          },
+        {
+          "id": 5,
+          "title": "Mao: The Unknown Story",
+          "author": "Jung Chang and Jon Halliday",
+          "category": "Historical",
+          "rating": 4.6,
+          "release_date": 2005,
+          "pages": 1152,
+          "language": "English",
+          "description": "Mao: The Unknown Story is a biography of Mao Zedong, the founder of the People's Republic of China. It is a well-researched and balanced book that provides a fascinating glimpse into the life of one of the most important figures of the 20th century."
+        },
+        {
+            "id": 6,
+          "title": "The Warmth of Other Suns: The Epic Story of America's Great Migration",
+          "author": "Isabel Wilkerson",
+          "category": "Historical",
+          "rating": 4.7,
+          "release_date": 2010,
+          "pages": 656,
+          "language": "English",
+          "description": "The Warmth of Other Suns is a book about the Great Migration, the movement of six million African Americans from the South to the North and West between 1916 and 1970. Wilkerson tells the stories of three individuals who made the journey and the challenges they faced along the way."
+        },
+        {
+            "id": 7,
+          "title": "The Civil War: A Narrative",
+          "author": "Shelby Foote",
+          "category": "Historical",
+          "rating": 4.7,
+          "release_date": "1958-1974",
+          "pages": 3232,
+          "language": "English",
+          "description": "The Civil War: A Narrative is a three-volume history of the American Civil War. It is a comprehensive and well-written work that is considered to be one of the best histories of the war ever written."
+        },
+        {
+            "id": 8,
+          "title": "The Devil in the White City: Murder, Magic, and Madness at the Fair That Changed America",
+          "author": "Erik Larson",
+          "category": "Historical",
+          "rating": 4.7,
+          "release_date": 2003,
+          "pages": 446,
+          "language": "English",
+          "description": "The Devil in the White City tells the story of the 1893 World's Columbian Exposition in Chicago and the serial killer H.H. Holmes, who preyed on victims at the fair. Larson does a masterful job of weaving the two stories together to create a gripping and suspenseful narrative."
+        },
+        {
+            "id":9,
+          "title": "The Guns of August",
+          "author": "Barbara Tuchman",
+          "category": "Historical",
+          "rating": 4.7,
+          "release_date": 1962,
+          "pages": 768,
+          "language": "English",
+          "description": "The Guns of August is a book about the outbreak of World War I. Tuchman provides a detailed and insightful account of the events leading up to the war, as well as the early months of the conflict."
+        },
+        {
+            "id": 10,
+          "title": "A History of the World",
+          "author": "Andrew Marr",
+          "category": "Historical",
+          "rating": 4.7,
+          "release_date": 2010,
+          "pages": 688,
+          "language": "English",
+          "description": "A History of the World is a comprehensive and engaging history of the world, from the earliest civilizations to the present day. Marr does a masterful job of telling the story of humanity in a way that is both informative and entertaining."
+        },
+        {
+            "id":11,
+          "title": "The Kiss Quotient",
+          "author": "Helen Hoang",
+          "category": "Romance",
+          "rating": 4.6,
+          "release_date": 2018,
+          "pages": 368,
+          "language": "English",
+          "description": "Stella Lane is a brilliant mathematician with autism. She decides to hire Michael Phan, a male escort, to help her learn how to kiss. As they spend more time together, Stella begins to develop feelings for Michael."
+        },
+        {
+            "id": 12,
+          "title": "The Love Hypothesis",
+          "author": "Ali Hazelwood",
+          "category": "Romance",
+          "rating": 4.7,
+          "release_date": 2021,
+          "pages": 381,
+          "language": "English",
+          "description": "Olive Smith, a PhD student in biology, fakes a relationship with her best friend, Adam Carlsen, to make her ex-boyfriend jealous. However, Olive and Adam soon find themselves falling in love for real."
+        },
+        {
+            "id": 13,
+          "title": "The Bride Test",
+          "author": "Helen Hoang",
+          "category": "Romance",
+          "rating": 4.6,
+          "release_date": 2019,
+          "pages": 352,
+          "language": "English",
+          "description": "Esme Tran is sent to Vietnam by her mother to find a bride for her son, Khai. Khai is not interested in getting married, but he agrees to meet Esme. The two of them quickly develop a connection, but their relationship is complicated by Khai's family and culture."
+        },
+        {
+            "id": 14,
+          "title": "Beach Read",
+          "author": "Emily Henry",
+          "category": "Romance",
+          "rating": 4.6,
+          "release_date": 2020,
+          "pages": 384,
+          "language": "English",
+          "description": "January Andrews, a romance novelist, and Gus Everett, a literary writer, are forced to spend the summer next door to each other. Despite their different writing styles, January and Gus begin to fall in love."
+        },
+        {
+            "id": 15,
+          "title": "The Hating Game",
+          "author": "Sally Thorne",
+          "category": "Romance",
+          "rating": 4.6,
+          "release_date": 2016,
+          "pages": 400,
+          "language": "English",
+          "description": "Lucy Hutton and Joshua Templeman are co-CEOs of a publishing house and they hate each other. However, when their company is acquired, they must work together to save their jobs. As they spend more time together, Lucy and Josh begin to realize that they may not hate each other as much as they thought."
+        },
+        {
+            "id": 16,
+          "title": "The Warmth of Other Suns: The Epic Story of America's Great Migration",
+          "author": "Isabel Wilkerson",
+          "category": "Historical",
+          "rating": 4.7,
+          "release_date": 2010,
+          "pages": 656,
+          "language": "English",
+          "description": "The Warmth of Other Suns is a book about the Great Migration, the movement of six million African Americans from the South to the North and West between 1916 and 1970. Wilkerson tells the stories of three individuals who made the journey and the challenges they faced along the way."
+        },
+        {
+            "id": 17,
+          "title": "Man's Search for Meaning",
+          "author": "Viktor Frankl",
+          "category": "Philosophy",
+          "rating": 4.7,
+          "release_date": 1946,
+          "pages": 165,
+          "language": "English",
+          "description": "A memoir by Viktor Frankl, a Jewish psychiatrist who survived the Holocaust, Man's Search for Meaning is a powerful exploration of the human spirit."
+        },
+        {
+            "id": 18,
+          "title": "Beyond Good and Evil",
+          "author": "Friedrich Nietzsche",
+          "category": "Philosophy",
+          "rating": 4.7,
+          "release_date": 1886,
+          "pages": 256,
+          "language": "English",
+          "description": "Beyond Good and Evil is a collection of essays by the German philosopher Friedrich Nietzsche, in which he critiques traditional morality and religion."
+        },
+        {
+            "id": 19,
+          "title": "The Sandman",
+          "author": "Neil Gaiman",
+          "category": "Comic",
+          "rating": 4.8,
+          "release_date": "1989-1996",
+          "pages": 1536,
+          "language": "English",
+          "description": "A critically acclaimed series about Dream, the Lord of Dreams, and his siblings."
+        },
+        {
+            "id": 20,
+          "title": "Maus",
+          "author": "Art Spiegelman",
+          "category": "Comic",
+          "rating": 4.9,
+          "release_date": "1986-1991",
+          "pages": 296,
+          "language": "English",
+          "description": "A graphic novel that tells the story of the author's father's Holocaust experiences."
+        },
+        {
+            "id": 21,
+          "title": "To Kill a Mockingbird",
+          "author": "Harper Lee",
+          "category": "Literature",
+          "rating": 4.8,
+          "release_date": 1960,
+          "pages": 296,
+          "language": "English",
+          "description": "A Pulitzer Prize-winning novel about a young girl growing up in the Jim Crow South who witnesses her father defend a black man falsely accused of rape."
+        },
+        {
+            "id": 22,
+          "title": "Pride and Prejudice",
+          "author": "Jane Austen",
+          "category": "Literature",
+          "rating": 4.8,
+          "release_date": 1813,
+          "pages": 352,
+          "language": "English",
+          "description": "A classic romantic comedy about a young woman who must overcome her own pride and prejudice to find love."
+        },
+        {
+            "id": 23,
+          "title": "The Bhagavad Gita",
+          "author": "Vyasa",
+          "category": "Religion",
+          "rating": 4.9,
+          "release_date": "400 BC - 200 BC",
+          "pages": 700,
+          "language": "Sanskrit",
+          "description": "A Hindu scripture that is part of the Mahabharata, one of the two major Sanskrit epics of ancient India. It is set in a chariot before the Kurukshetra War and is a dialogue between Pandava prince Arjuna and his charioteer Krishna, who is an avatar of the Hindu god Vishnu."
+        },
+        {
+            "id": 24,
+          "title": "The Analects",
+          "author": "Confucius",
+          "category": "Religion",
+          "rating": 4.8,
+          "release_date": "551 BC - 479 BC",
+          "pages": 200,
+          "language": "Chinese",
+          "description": "A collection of sayings and ideas attributed to the Chinese philosopher Confucius and his contemporaries, traditionally believed to have been compiled by his students."
+        },
+        {
+            "id": 25,
+          "title": "A Brief History of Time",
+          "author": "Stephen Hawking",
+          "category": "Science",
+          "rating": 4.7,
+          "release_date": 1988,
+          "pages": 256,
+          "language": "English",
+          "description": "A book by Stephen Hawking that explains the nature of time and space. The work is considered to be a classic of popular science."
+        },
+        {
+            "id": 26,
+          "title": "Cosmos",
+          "author": "Carl Sagan",
+          "category": "Science",
+          "rating": 4.8,
+          "release_date": 1980,
+          "pages": 384,
+          "language": "English",
+          "description": "A book by Carl Sagan that explores the history of the universe and our place in it. The work is considered to be a classic of popular science."
+        }
+      ]
+    ]
+
+
+}
