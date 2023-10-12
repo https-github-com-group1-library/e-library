@@ -60,6 +60,10 @@
     background: var(--red);
   }
   
+  .card .content-container{
+    text-align: start;
+  }
+
   .card .card-title {
     font-size: 20px;
   }
@@ -124,6 +128,7 @@
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     max-height: 200px;
+    max-width: 131px;
     object-fit: cover;
-    margin-left: 40px;
+    /* margin-bottom: 40px; */
   }
