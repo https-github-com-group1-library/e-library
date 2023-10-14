@@ -76,6 +76,15 @@
       flex-direction: column;
       align-items: center;
     }
+    .card#clicked{
+      min-width: 93%;
+      animation-duration: 1s;
+      animation-name: clickedSizeSmall;
+    }
+  }
+  @keyframes clickedSizeSmall {
+    0%   {min-width: 252.4px;}
+    100% {min-width: 93%;}
   }
 
   .card#clicked .contents{
