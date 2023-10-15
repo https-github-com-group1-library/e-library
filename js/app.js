@@ -166,37 +166,44 @@ function clickCard(id, section){
 }
 
 // function to (print the card) based on if it clicked or not
-function printCards(section, books){
+function printCards(section, bookList){
     let list = document.querySelectorAll(section);
     let listItems = document.querySelectorAll(`li.${section}`);
     console.log(section);
     let i = 0;
     listItems.forEach(item => {
+        var bookid = 0;
         var idAttribute = item.getAttribute("id");
         console.log(idAttribute);
         if (idAttribute && idAttribute.indexOf('clicked') !== -1) {
+            books.forEach(element =>{
+                if(bookList[i].title == element.title){
+                    bookid = element.id;
+                }
+            });
+
             console.log('hi' + item);
             item.removeAttribute('onclick');
             item.innerHTML = `
             <div>
                 <div class = "contents" >
-                    <img src="${books[i].image}" class="card-img-top mb-3" alt="${books[i].title}" style="max-height: 317px; max-width: 208px;">
+                    <img src="${bookList[i].image}" class="card-img-top mb-3" alt="${bookList[i].title}" style="max-height: 317px; max-width: 208px;">
                     <div class = "content-container px-3">
                         <div class="d-flex justify-content-between">
-                            <h3 class="card-title">Title: ${books[i].title}</h3>
-                            <a id="fav" onclick="addToFav(${books[i].id}, ${i}, '${section}', event)" style="text-decoration: none; color: black;"><i class="fav-icon far fa-heart"></i></a>
+                            <h3 class="card-title">Title: ${bookList[i].title}</h3>
+                            <a id="fav" onclick="addToFav(${bookList[i].id}, ${i}, '${section}', event)" style="text-decoration: none; color: black;"><i class="fav-icon far fa-heart"></i></a>
                         </div>
                         <div class="card-content">
-                            <p>Author: ${books[i].author}</p>
-                            <p>Category: ${books[i].category}</p>
-                            <p>Release Date: ${books[i].release_date}</p>
-                            <p style="max-height: 144px; ovverflow: hidden;">Description: ${books[i].description}</p>
+                            <p>Author: ${bookList[i].author}</p>
+                            <p>Category: ${bookList[i].category}</p>
+                            <p>Release Date: ${bookList[i].release_date}</p>
+                            <p style="max-height: 144px; ovverflow: hidden;">Description: ${bookList[i].description}</p>
                         </div>
                     </div>
                 </div>
                 <div class="d-flex justify-content-between">
-                    <p>Rating: ${books[i].rating} <i class="fas fa-star" style="color: gold;"></i></p>
-                    <a href="HTML/book-details.html" class="btn read-more">Read more</a>
+                    <p>Rating: ${bookList[i].rating} <i class="fas fa-star" style="color: gold;"></i></p>
+                    <a href="HTML/book-details.html?id=${bookid} " class="btn read-more">Read more</a>
                 </div>
             </div>`;
             i++;
