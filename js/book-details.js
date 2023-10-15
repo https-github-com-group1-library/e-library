@@ -9,7 +9,8 @@ class Book {
     rating,
     description,
     pages,
-    language
+    language,
+    pdf
   ) {
     this.id = id;
     this.image = image;
@@ -21,25 +22,35 @@ class Book {
     this.description = description;
     this.pages = pages;
     this.language = language;
+    this.pdf = pdf;
   }
 }
 // ---------------------------------------------------------------------
-function change(idd) {
-  bookimage(idd);
-  booktitle(idd);
-  bookpages(idd);
-  bookdate(idd);
-  booklang(idd);
-  bookcatg(idd);
-  bookauthor(idd);
-  bookrating(idd);
-  bookdetails(idd);
+function changeFromUrl() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const id = parseInt(urlParams.get("id"));
+
+  if (!isNaN(id)) {
+    bookimage(id);
+    booktitle(id);
+    bookpages(id);
+    bookdate(id);
+    booklang(id);
+    bookcatg(id);
+    bookauthor(id);
+    bookrating(id);
+    bookdetails(id);
+    bookpdf(id);
+  } else {
+    console.error("Invalid book ID in the URL.");
+  }
 }
-change(6);
+changeFromUrl();
+
 // ---------------------------------------------------------------------
 
 async function bookimage(id) {
-  const response = await fetch("http://localhost:3000/books");
+  const response = await fetch(`http://localhost:3000/books`);
 
   const books = await response.json();
 
@@ -124,11 +135,11 @@ async function bookcatg(id) {
         Related = Related.filter((book) => book.category === bookcatg2);
         console.log(Related);
         let cards = '<ul class="cards">';
-        for (i = 0; i < 6; i++) {
+        for (i = 0; i < Related.length; i++) {
           cards += `
             <li class="card">
               <div>
-                <img src="${Related[i].image}" class="card-img-top" alt="..." />
+              <a href="http://127.0.0.1:5500/HTML/book-details.html?id=${Related[i].id}"><img src="${Related[i].image}" class="card-img-top" alt="..." /></a>
                 <h3 class="card-title">Title: ${Related[i].title}</h3>
                 <div class="card-content">
                   <p>Author: ${Related[i].author}</p>
@@ -176,9 +187,26 @@ async function bookdetails(id) {
   document.querySelector(".details3").textContent = bookdetails;
 }
 // ----------------------------------------------------------------------
+async function bookpdf(id) {
+  const response = await fetch("http://localhost:3000/books");
+
+  const books = await response.json();
+
+  const bookpdf = books[id - 1].pdf;
+
+  document.querySelector(".downloadlink").innerHTML = `
+  <a
+                href="${bookpdf}"
+                target="_blank"
+              >
+                <button class="download">Download now</button>
+  `;
+}
+// ----------------------------------------------------------------------
 // ----------------------------------------------------------------------
 document.addEventListener("DOMContentLoaded", function () {
   const txt1 = document.getElementById("write-review1");
+  const rate = document.getElementById("select");
   const btn1 = document.querySelector(".write-review");
   let review = document.createElement("span");
   function fun1() {
@@ -193,7 +221,7 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>
     <div>
       <span>User Review :</span>
-      <span class="details-rating">5.0</span>
+      <span class="details-rating">${rate.value}</span>
     </div>
     <div>
       <span>User Comment :</span>
@@ -204,3 +232,5 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   btn1.addEventListener("click", fun1);
 });
+
+// ----------------------------------------------------------------------------
