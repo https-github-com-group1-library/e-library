@@ -113,8 +113,8 @@ function addRecommendation(){
             let details = document.getElementById('recommend-details');
             details.innerHTML = `
                 <img src="${recommendation[0].image}" alt="${recommendation[0].title}" height="390.06" width="282.19px">
-                <div class="d-flex justify-content-between mx-5 px-4 my-4">
-                    <div class="text-start me-4">
+                <div class="d-flex justify-content-between m-3 px-2">
+                    <div class="text-start me-4 mt-3">
                         <p><b>Title: ${recommendation[0].title}</b></p>
                         <p>Rating: ${books[i].rating} <i class="fas fa-star" style="color: gold;"></i></p>
                     </div>
@@ -219,11 +219,11 @@ function printCards(section, bookList){
                     <img src="${books[i].image}" class="card-img-top mb-3" alt="${books[i].title}" style="height: 200px">
                     <div class = "content-container px-3">
                         <div class="d-flex justify-content-between">
-                            <h3 class="card-title">Title: ${books[i].title}</h3>
+                            <h3 class="card-title" style="height: 52px; overflow: hidden;">Title: ${books[i].title}</h3>
                             <a id="fav" onclick="addToFav(${books[i].id}, ${i}, '${section}', event)" style="text-decoration: none; color: black;"><i class="fav-icon far fa-heart"></i></a>
                         </div>
                         <div class="card-content">
-                            <p>Author: ${books[i].author}</p>
+                            <p style="height: 48px">Author: ${books[i].author}</p>
                         </div>
                     </div>
                 </div>`;
@@ -245,12 +245,114 @@ function addToFav(id, index, section, event){
     if(heartIcon[index].classList.contains('far')){
         heartIcon[index].classList.remove('far');
         heartIcon[index].classList.add('fas');
+
     }else if(heartIcon[index].classList.contains('fas')){
         heartIcon[index].classList.remove('fas');
         heartIcon[index].classList.add('far');
+    
     }
 }
 
+//////////////////////////////////////////////////////////
+document.addEventListener('DOMContentLoaded', function() {
+    let flag = 0;
+    const c1 = document.querySelector('.c1');
+    const c2 = document.querySelector('.c2');
+    const c3 = document.querySelector('.c3');
+    const c4 = document.querySelector('.c4');
+    const c5 = document.querySelector('.c5');
+    const c6 = document.querySelector('.c6');
+  
+    const nextButton = document.querySelector('.cco');
+  
+    nextButton.addEventListener('click', function() {
+      if (flag === 0) {
+        c2.style.transform = 'translateX(0) scale(1.5)';
+        c2.style.zIndex = '99';
+        c3.style.transform = 'translateX(-100px) scale(1)';
+        c3.style.zIndex = '9';
+        c4.style.transform = 'translateX(-100px) scale(1)';
+        c4.style.zIndex = '9';
+        c5.style.transform = 'translateX(-100px) scale(1)';
+        c5.style.zIndex = '9';
+        c6.style.transform = 'translateX(-100px) scale(1)';
+        c6.style.zIndex = '9';
+        c1.style.transform = 'translateX(100px) scale(1)';
+        c1.style.zIndex = '9';
+        flag = 1;
+      } else if (flag === 1) {
+        c3.style.transform = 'translateX(0) scale(1.5)';
+        c3.style.zIndex = '99';
+        c4.style.transform = 'translateX(-100px) scale(1)';
+        c4.style.zIndex = '9';
+        c5.style.transform = 'translateX(-100px) scale(1)';
+        c5.style.zIndex = '9';
+        c6.style.transform = 'translateX(-100px) scale(1)';
+        c6.style.zIndex = '9';
+        c1.style.transform = 'translateX(100px) scale(1)';
+        c1.style.zIndex = '9';
+        c2.style.transform = 'translateX(100px) scale(1)';
+        c2.style.zIndex = '9';
+        flag = 2;
+      } else if (flag === 2) {
+        c4.style.transform = 'translateX(0) scale(1.5)';
+        c4.style.zIndex = '99';
+        c5.style.transform = 'translateX(-100px) scale(1)';
+        c5.style.zIndex = '9';
+        c6.style.transform = 'translateX(-100px) scale(1)';
+        c6.style.zIndex = '9';
+        c1.style.transform = 'translateX(-100px) scale(1)';
+        c1.style.zIndex = '9';
+        c2.style.transform = 'translateX(100px) scale(1)';
+        c2.style.zIndex = '9';
+        c3.style.transform = 'translateX(100px) scale(1)';
+        c3.style.zIndex = '9';
+        flag = 3;
+      }else if (flag === 3) {
+        c5.style.transform = 'translateX(0) scale(1.5)';
+        c5.style.zIndex = '99';
+        c6.style.transform = 'translateX(-100px) scale(1)';
+        c6.style.zIndex = '9';
+        c1.style.transform = 'translateX(-100px) scale(1)';
+        c1.style.zIndex = '9';
+        c2.style.transform = 'translateX(-100px) scale(1)';
+        c2.style.zIndex = '9';
+        c3.style.transform = 'translateX(100px) scale(1)';
+        c3.style.zIndex = '9';
+        c4.style.transform = 'translateX(100px) scale(1)';
+        c4.style.zIndex = '9';
+        flag = 4;
+      }else if (flag === 4) {
+        c6.style.transform = 'translateX(0) scale(1.5)';
+        c6.style.zIndex = '99';
+        c1.style.transform = 'translateX(-100px) scale(1)';
+        c1.style.zIndex = '9';
+        c2.style.transform = 'translateX(-100px) scale(1)';
+        c2.style.zIndex = '9';
+        c3.style.transform = 'translateX(-100px) scale(1)';
+        c3.style.zIndex = '9';
+        c4.style.transform = 'translateX(100px) scale(1)';
+        c4.style.zIndex = '9';
+        c5.style.transform = 'translateX(100px) scale(1)';
+        c5.style.zIndex = '9';
+        flag = 5;
+      }else if (flag === 5) {
+        c1.style.transform = 'translateX(0) scale(1.5)';
+        c1.style.zIndex = '99';
+        c2.style.transform = 'translateX(-100px) scale(1)';
+        c2.style.zIndex = '9';
+        c3.style.transform = 'translateX(-100px) scale(1)';
+        c3.style.zIndex = '9';
+        c4.style.transform = 'translateX(-100px) scale(1)';
+        c4.style.zIndex = '9';
+        c5.style.transform = 'translateX(100px) scale(1)';
+        c5.style.zIndex = '9';
+        c6.style.transform = 'translateX(100px) scale(1)';
+        c6.style.zIndex = '9';
+        flag = 0;
+      }
+    });
+});
 
 
 
