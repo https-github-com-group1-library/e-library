@@ -1,5 +1,5 @@
 body{
-    background-image:url("../media/background-auth.png");
+    background-image:url("/assest/background-auth.png");
     /* height: 100%; */
     overflow: hidden;
     background-size: cover;
