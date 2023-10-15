@@ -77,41 +77,45 @@ document.getElementById('signin').addEventListener('click', async function (even
                     email: userData.email
                 });
 
-                fetch("http://localhost:3000/data")
-                    .then(response => {
-                        if (!response.ok) {
-                            throw new Error(`HTTP error! Status: ${response.status}`);
-                        }
-                        return response.json();
+                Successfulmsg(`${userData.firstname} ${userData.lastname} login successfully`);
+                setTimeout(() => {
+                    fetch("http://localhost:3000/data", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                        },
+                        body: userJSON,
                     })
-                    .then(responseJson => {
-                        const userId = responseJson[0].id;
+                }, 1000);
 
-                        // Save the ID in sessionStorage
-                        sessionStorage.setItem('userId', userId);
 
-                        const userData = responseJson[0];
-                        // const userJSON = JSON.stringify(userData);
+                setTimeout(() => {
+                    fetch("http://localhost:3000/data")
+                        .then(response => {
+                            if (!response.ok) {
+                                throw new Error(`HTTP error! Status: ${response.status}`);
+                            }
+                            return response.json();
+                        })
+                        .then(responseJson => {
+                            const userId = responseJson[0].id;
 
-                        Successfulmsg(`${userData.firstname} ${userData.lastname} login successfully`);
-                        setTimeout(() => {
-                            fetch("http://localhost:3000/data", {
-                                method: "POST",
-                                headers: {
-                                    "Content-Type": "application/json",
-                                },
-                                body: userJSON,
-                            })
+                            // Save the ID in sessionStorage
+                            sessionStorage.setItem('userId', userId);
+                            const userData = responseJson[0];
+                            const userJSON = JSON.stringify(userData);
+                        })
 
-                            window.location.href = "../index.html"; // Navigate to the homepage here
-                            console.log("Setting userId in sessionStorage:", userId);
-                            console.log("userId:", userId);
-                        }, 1600);
-                    })
-                    .catch(error => console.error("Error retrieving data:", error));
+
+                        .catch(error => console.error("Error retrieving data:", error));
+                }, 1000);
             } else {
                 showInvalidMsg("User data not found.");
             }
+            setTimeout(() => {
+                window.location.href = "../index.html"; // Navigate to the homepage here
+            }, 1100);
+
         })
         .catch((error) => {
             const errorCode = error.code;
