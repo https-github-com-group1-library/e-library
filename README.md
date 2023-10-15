@@ -25,8 +25,8 @@ Organization Repository [Link](https://github.com/https-github-com-group1-librar
 * Rawand [Link](https://github.com/rawand-hawwari/bookCraze)
 * Muhammed [Link]()
 * Amer [Link]()
-* Ehab [Link]()
-* Melad [Link]()
+* Ehab [Link](https://github.com/Ehabdhafer/book-reading)
+* Melad [Link](https://github.com/MeladAbulail/BookReading)
 * Abdullah [Link]()
 * Sanad [Link]()
 
