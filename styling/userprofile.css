@@ -50,6 +50,22 @@
     display: none;
 }
 
+.bte5 {
+    margin-top: -35px;
+}
+
+.labelforimg {
+    display: block;
+    width: 130px;
+    padding: 12px;
+    margin: 20px auto;
+    background-color: #E55604;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 88px;
+}
+
 .container-section2 {
     border-top: 2px solid #E55604;
     background-color: white;
@@ -58,7 +74,7 @@
     box-shadow: 0 10px 5px #888888;
     border-radius: 20px;
     width: 60%;
-    height: 500px;
+    min-height: 404px;
     margin: 50px auto;
 }
 
@@ -108,7 +124,7 @@
 
 .edit_information {
     margin: auto;
-    margin-top: 20px;
+    margin-top: 56px;
 
 }
 
@@ -122,6 +138,21 @@
 
 .submit {
     width: 100px;
+    margin-left: 40%;
+    background-color: #E55604;
+    border: 1px solid #E55604;
+    border-radius: 10px;
+    transition: 1s ease;
+    height: 45px;
+}
+
+.submit:hover {
+    background-color: white;
+}
+
+.button {
+    width: 100px;
+    height: 25px;
     margin-left: 245px;
     background-color: #E55604;
     border: 1px solid #E55604;
@@ -129,10 +160,9 @@
     transition: 1s ease;
 }
 
-.submit:hover {
+.button:hover {
     background-color: white;
 }
-
 
 
 @media only screen and (max-width: 767px) {
@@ -164,6 +194,21 @@
     .icon2 {
         display: block;
         width: 30px;
+    }
+
+    /* #file-input {
+        display: none;
+    } */
+    .labelforimg {
+        display: block;
+        width: 200px;
+        padding: 12px;
+        margin: 10px auto;
+        background-color: #E55604;
+        color: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+
     }
 
     .cont-logout {
