@@ -123,6 +123,7 @@ section h2 {
   /* bottom: -40px; */
   /* top: 1px; */
   border: #e55604 solid 2px;
+  object-fit: cover;
 }
 :root {
   --red: #e55604;
