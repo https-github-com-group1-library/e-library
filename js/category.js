@@ -33,7 +33,7 @@ function getdata() {
                 `;
 
                 card.querySelector('.card-img-top').addEventListener('click', () => {
-                    window.location.href = `html/detail.html?id=${book.id}`;
+                    window.location.href = `/HTML/book-details.html?id=${book.id}`;
                 });
                 cards.appendChild(card);
             });
@@ -81,7 +81,7 @@ categorySelect.addEventListener("change", (e) => {
                         </div>
                     `;
                     card.querySelector('.card-img-top').addEventListener('click', () => {
-                        window.location.href = `html/detail.html?id=${element.id}`;
+                        window.location.href = `/HTML/book-details.html?id=${element.id}`;
                     });
                     cards.appendChild(card);
                 }
@@ -131,7 +131,7 @@ authorSelect.addEventListener("change", (e) => {
                         </div>
                     `;
                     card.querySelector('.card-img-top').addEventListener('click', () => {
-                        window.location.href = `html/detail.html?id=${element.id}`;
+                        window.location.href = `/HTML/book-details.html?id=${element.id}`;
                     });
                     cards.appendChild(card);
                 }
@@ -179,7 +179,7 @@ languageSelect.addEventListener("change", (e) => {
                         </div>
                     `;
                     card.querySelector('.card-img-top').addEventListener('click', () => {
-                        window.location.href = `html/detail.html?id=${element.id}`;
+                        window.location.href = `/HTML/book-details.html?id=${element.id}`;
                     });
                     cards.appendChild(card);
                 }
