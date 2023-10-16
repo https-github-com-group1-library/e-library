@@ -111,6 +111,7 @@ document.getElementById("signup").addEventListener("click", function (event) {
         lastname: lastname,
         email: email,
         address: address,
+        userUID:userCredential.user.uid
       });
     })
     .then(() => {

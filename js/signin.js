@@ -18,7 +18,9 @@ const db = getFirestore(app);
 
 let box = document.getElementById("check-box2");
 
-document.getElementById('signin').addEventListener('click', async function (event) {
+let UiD2 = 0;
+
+document.getElementById('signin').addEventListener('click', async function (event, uid) {
     event.preventDefault();
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
@@ -62,11 +64,13 @@ document.getElementById('signin').addEventListener('click', async function (even
 
     signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
-            const user = userCredential.user;
+            const user = userCredential.user.uid;
             // Fetch user data from Firestore using the user's UID
+            sessionStorage.setItem('userId', user);
             return getDoc(doc(db, 'users', email));
         })
         .then((docSnap) => {
+            
             if (docSnap.exists()) {
                 const userData = docSnap.data();
 
@@ -98,12 +102,17 @@ document.getElementById('signin').addEventListener('click', async function (even
                             return response.json();
                         })
                         .then(responseJson => {
-                            const userId = responseJson[0].id;
 
+                            // const userId = responseJson[UiD2].email;
+
+                            // console.log(userId);
+                            // UiD2++;
+                            // console.log(UiD2);
                             // Save the ID in sessionStorage
-                            sessionStorage.setItem('userId', userId);
-                            const userData = responseJson[0];
-                            const userJSON = JSON.stringify(userData);
+                            // sessionStorage.setItem('userId', userUID);
+                            // const userData = responseJson[UiD2];
+                            // UiD2++;
+                            // const userJSON = JSON.stringify(userData);
                         })
 
 
