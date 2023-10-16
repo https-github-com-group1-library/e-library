@@ -10,6 +10,8 @@
 /*ABOUT US*/
 /*-------------------------------------------------------------------------------------------------------------------------------*/
 
+
+
 .aboutusfullcont{
     min-height: 100vh;
     display: flex;
@@ -69,7 +71,7 @@
     font-weight: 400;
     color: black;
     font-family: 'poppins';
-    margin-left: 50px;
+    
 }
 
 .inner-before-container ul{
@@ -84,10 +86,9 @@
     background: url(/assest/beforeaboutus.png);
     width: 100px;
     height: 100px;
-    padding: 50px;
     background-color: orange;
     border-radius: 50px;
-    margin: 0px 100px ;
+    margin: 0px 140px;
 }
 
 .beforeliitem2{
@@ -357,7 +358,11 @@ textarea{
     }
 }
 
-
+@media screen and (max-width : 800px){
+    .Herosectioncontactus > h1{
+        font-size: 3rem;
+    }
+}
 
 @media screen and (max-width : 600px){
     .inner-aboutus-container{
