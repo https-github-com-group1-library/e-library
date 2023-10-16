@@ -21,45 +21,30 @@ justify-content: center;
   width: 100%;
   background-color: grey;
 }
-
-
 .aboutussection{
   height: 100vh;
   width: 100%;
   background-color: blue;
 }
-
-
-
 #authors{
-
   display: flex;
-  /* grid-template-columns:repeat(4,350px);  */
- flex-direction: row;
+  flex-direction: row;
   flex-wrap: wrap;
-
   gap: 25px 29px;
   padding-top: 100px;
   justify-content: center;
-
-
-padding-top: 100px;
+  padding-top: 100px;
   
 }
-
-
 @property --rotate {
   syntax: "<angle>";
   initial-value: 132deg;
   inherits: false;
 }
-
 :root {
   --card-height: 65vh;
   --card-width: calc(var(--card-height) / 1.5);
 }
-
-
 body {
   min-height: 100vh;
   background: #ffffff;
@@ -68,72 +53,31 @@ body {
   flex-direction: column;
   box-sizing: border-box;
 }
-
-
 .card {
   background: #ffffff;
   width: var(--card-width);
-  /* height: 150px; */
   height: fit-content;
-  padding: 3px;
   position: relative;
   border-radius: 6px;
-  justify-content: center;
   align-items: center;
   text-align: center;
   display: flex;
-  font-size: 1.5em;
   color: rgb(88 199 250 / 0%);
   cursor: pointer;
   font-family: cursive;
 }
-
-.card:hover {
+ .card:hover {
   color: rgb(217, 93, 16);
   transition: color 1s;
 }
-.card:hover:before, .card:hover:after {
-  animation: none;
-  opacity: 0;
+.card:hover {
+  color: var(--darkred);
+  background: var(--white);
+  box-shadow: 5px 10px 10px rgba(241, 130, 70, 0.5),
+    -5px -5px 10px rgba(241, 130, 70, 0.5);
+  font-size: 1.1em;
+  font-weight: 600;
 }
-
-
-.card::before {
-  content: "";
-  width: 104%;
-  height: 102%;
-  border-radius: 8px;
-  background-image: linear-gradient(
-    var(--rotate)
-    , #ffbc5d, #ef7a26 43%, #ec7e00);
-
-    position: absolute;
-    z-index: -1;
-    top: -1%;
-    left: -2%;
-    animation: spin 2.5s linear infinite;
-}
-
-.card::after {
-  position: absolute;
-  content: "";
-  top: calc(var(--card-height) / 6);
-  left: 0;
-  right: 0;
-  z-index: -1;
-  height: 100%;
-  width: 100%;
-  margin: 0 auto;
-  transform: scale(0.8);
-  filter: blur(calc(var(--card-height) / 6));
-  background-image: linear-gradient(
-    var(--rotate)
-    , #ffffff, #ffffff 43%, #ffffff);
-    opacity: 1;
-  transition: opacity .5s;
-  animation: spin 2.5s linear infinite;
-}
-
 @keyframes spin {
   0% {
     --rotate: 0deg;
@@ -142,32 +86,27 @@ body {
     --rotate: 360deg;
   }
 }
-
 a {
   color: #212534;
   text-decoration: none;
   font-family: sans-serif;
   font-weight: bold;
-  margin-top: 2rem;
+  display: contents;
 }
-
-
 @media(max-width: 960px){
-
 }
-
 @media screen and (max-width : 830px){
   .Herosectioncontactus > h1{
       font-size: 4rem;
   }
 }
-
 /* RESET & BASIC STYLES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 :root {
   --white: #fff;
   --header-bg: #d47952;
   --footer-bg: #191717;
+  --darkred: #e55604;
 }
 
 * {
