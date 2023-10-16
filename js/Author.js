@@ -248,3 +248,51 @@ class Book {
     getAuthorBooks(author);
   });
   
+
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const searchForm = document.getElementById("search-form");
+  
+    // Add a submit event listener to the form
+    searchForm.addEventListener("submit", function (event) {
+      event.preventDefault(); // Prevent the default form submission
+  
+      // Get the author's name from the search bar input
+      const authorName = document.getElementById("searchbar").value;
+  
+      // Construct the URL to the author's page with the entered author name
+      const authorUrl = `/HTML/Author.html?author=${authorName}`;
+  
+      // Navigate to the specified URL
+      window.location.href = authorUrl;
+    });
+  });
+
+  function caseInsensitiveSearch(needle, haystack) {
+    return haystack.toLowerCase().includes(needle.toLowerCase());
+  }
+
+//   async function getAuthorBooksFromSearch(author) {
+//     const books = await fetch(`http://localhost:3000/books`);
+//     const booksJson_ = await books.json();
+//     console.log(booksJson_);
+//     // Get the author's name from the search bar input
+//     const authorName = document.getElementById("searchbar").value;
+  
+//     // Filter books based on the author name (case-insensitive and partial match)
+//     const filteredBooks = booksJson_.filter((book) =>
+//       caseInsensitiveSearch(authorName, book.author)
+//     );
+  
+//     if (filteredBooks.length > 0) {
+//       // Author found, display books
+//       const authorBooks = filteredBooks.map((book) => book.id);
+//       createBooks(filteredBooks);
+  
+//       // The rest of your code to display top-rated books and suggestions...
+//     } else {
+//       // Author not found, handle it as needed (e.g., show a message)
+//       console.log("Author not found");
+//     }
+//   }

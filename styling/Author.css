@@ -4,12 +4,12 @@ body {
   color: #191717;
 }
 
-header {
+/* header {
   text-align: center;
   background-color: #e55604;
   color: #fefef2;
   padding: 10px;
-}
+} */
 
 main {
   max-width: 100%;
@@ -23,11 +23,17 @@ section {
   margin-bottom: 20px;
 }
 .hero-section {
+  background-image: url('/assest/background\ author.jpg'); /* Replace 'path/to/your-image.jpg' with the actual image file path */
+  background-size: cover; /* This property scales the background image to cover the entire container */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  background-position: center; /* Center the image horizontally and vertically */
+
+  
   display: grid;
   grid-template-columns: 30% 40% 20%;
   height: 550px;
   padding-top: 30px;
-  background-color: #f1efef;
+  background-color: #ffffff;
   overflow: hidden;
 }
 
@@ -58,7 +64,7 @@ section h2 {
 }
 
 .book p {
-  font-size: 1.8rem;
+  font-size: 1rem;
   line-height: 1.5rem;
 }
 
@@ -66,7 +72,7 @@ section h2 {
 
 .author-avatar {
   /* width: 50rem; */
-  height: 450px;
+  height: 500px;
   border-radius: 50%; /* Create a circular image by setting border-radius to 50% */
   /* margin-bottom: 35px; */
 }
@@ -113,7 +119,12 @@ section h2 {
   height: 300px;
   z-index: 2;
   overflow-y: scroll;
-  
+
+  scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer and Edge */
+}
+#about-author::-webkit-scrollbar {
+  display: none; /* Hide the scrollbar in WebKit-based browsers */
 }
 
 .author-avatar {
@@ -242,12 +253,18 @@ section h2 {
     .card:not(:last-child) {
       margin-right: 30px;
     }
+    #author-img{
+      max-width: 200px;
+    }
   }
   
   @media (min-width: 1100px) {
     .card {
       flex-basis: calc(25% - 30px);
     }
+    /* #author-img{
+      max-width: 200px;
+    } */
   
     .card:not(:last-child) {
       margin-right: 40px;
@@ -330,6 +347,10 @@ a {
   font-size: 15px;
   line-height: 1;
 }
+#author-img{
+  max-width: 700px;
+  min-width: 500px;
+}
 
 .site-footer1 .widgets-wrapper1 {
   display: grid;
@@ -374,6 +395,9 @@ a {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
   }
+  /* #author-img{
+    max-width: 200px;
+  } */
 }
 
 .creator1 {
@@ -402,4 +426,11 @@ a {
 }
 .container-sm p{
   /* font-size: xx-small; */
+}
+@media (max-width: 1100px) {
+  .hero-section {
+    /* display: flex; */
+    /* flex-direction: row; */
+
+  }
 }
