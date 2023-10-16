@@ -163,7 +163,9 @@ async function bookauthor(id) {
 
   const bookauthor = books[id - 1].author;
 
-  document.querySelector(".author-name").textContent = bookauthor;
+  document.querySelector(".author-name").innerHTML = `
+  <a href="/HTML/author.html?author=${bookauthor}"><span class="author-name">${bookauthor}</span></a>
+  `;
 }
 // ---------------------------------------------------------------------
 async function bookrating(id) {
