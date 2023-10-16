@@ -253,7 +253,7 @@ function addToFav(id, index, section, event){
     }
 }
 
-//////////////////////////////////////////////////////////
+// review cards
 document.addEventListener('DOMContentLoaded', function() {
     let flag = 0;
     const c1 = document.querySelector('.c1');
