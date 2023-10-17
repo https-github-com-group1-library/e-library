@@ -121,11 +121,13 @@ async function getUserData(id) {
 
   function favorite(){
     document.getElementById('form-profile').style.display='none';
+    document.getElementById('favSection').style.display='block';
     displayFav();
   }
 
   function details(){
     document.getElementById('form-profile').style.display="block";
+    document.getElementById('favSection').style.display="none";
   }  
 
   const userSession = sessionStorage. getItem('userId');
@@ -157,7 +159,7 @@ async function getUserData(id) {
                         });
                     }
 
-                    document.getElementById('favSection').innerHTML = '<ul id="cards"></ul>';
+                    document.getElementById('favSection').innerHTML = '<ul id="cards" style="flex-wrap: wrap; display: flex; width: max-content; justify-content: flex-start;"></ul>';
                     console.log(favorites);
                     if (favorites.length !== 0) {
                         favorites.forEach(element => {
