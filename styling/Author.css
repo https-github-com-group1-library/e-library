@@ -29,12 +29,18 @@ section {
   background-position: center; /* Center the image horizontally and vertically */
 
   
-  display: grid;
-  grid-template-columns: 30% 40% 20%;
+  /* display: grid;
+  grid-template-columns: 30% 40% 20%; */
   height: 550px;
   padding-top: 30px;
   background-color: #ffffff;
   overflow: hidden;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
 section h2 {
@@ -43,6 +49,10 @@ section h2 {
 .book {
   display: flex;
   flex-direction: column;
+
+  flex: 2;
+  text-align: center;
+  padding: 20px;
 }
 .book {
   display: flex;
@@ -70,12 +80,7 @@ section h2 {
 
 
 
-.author-avatar {
-  /* width: 50rem; */
-  height: 500px;
-  border-radius: 50%; /* Create a circular image by setting border-radius to 50% */
-  /* margin-bottom: 35px; */
-}
+
 .best-seller {
   width: 9rem;
   background-color: #e55604;
@@ -109,10 +114,24 @@ section h2 {
   font-weight: 600;
 }
 
+.author-avatar {
+  /* width: 50rem; */
+  height: 450px;
+  border-radius: 50%; /* Create a circular image by setting border-radius to 50% */
+  /* margin-bottom: 35px; */
+
+  max-width: 100%; /* Ensure the image doesn't exceed its container width */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
 .author-info {
   width: 50%;
   /* overflow: hidden; */
   position: relative;
+
+  flex: 1;
+  text-align: center;
   
 }
 #about-author{
@@ -127,6 +146,10 @@ section h2 {
   display: none; /* Hide the scrollbar in WebKit-based browsers */
 }
 
+.h4, h4 {
+  font-size: calc(1.275rem + .3vw);
+}
+
 .author-avatar {
   /* width: 160%; Increase the width to 150% to make it overflow the container */
   position: absolute;
@@ -135,6 +158,95 @@ section h2 {
   /* top: 1px; */
   border: #e55604 solid 2px;
   object-fit: cover;
+}
+
+/* Styles for screens with a maximum width of 768px (tablets and smaller) */
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column; /* Stack elements vertically */
+  }
+}
+
+/* Styles for screens with a maximum width of 1024px (small laptops and larger tablets) */
+@media (max-width: 1024px) {
+  .author-info {
+    flex: 1; /* Adjust the relative width of the author-info section */
+  }
+  .book {
+    flex: 1; /* Adjust the relative width of the book section */
+  }
+}
+
+/* Styles for screens with a minimum width of 1025px (large laptops and desktops) */
+@media (min-width: 1025px) {
+  .author-info {
+    flex: 1; /* Reset the width for larger screens if needed */
+  }
+  .book {
+    flex: 2; /* Reset the width for larger screens if needed */
+  }
+}
+/* Styles for screens with a maximum width of 768px (tablets and smaller) */
+@media (max-width: 768px) {
+  .author-avatar {
+    height: 200px; /* Adjust the height for smaller screens */
+    min-width: 100px;
+    width: 200px;
+  }
+  .author-info{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-content: end;
+    align-items: center;
+    align-items: center;
+    margin-bottom: 40px;
+    margin-top: 100px;
+  }
+  .author-avatar{
+    /* display: block;
+    margin: auto;
+    justify-content: center;
+    align-content: end;
+    align-items: center;
+    align-items: end;
+    margin-bottom: 40px; */
+    position: unset;
+    width: 250px;
+    height: 250px;
+  }
+  #author-img{
+    display: flex;
+    justify-content: center;
+    align-content: end;
+    align-items: center;
+    align-items: end;
+    margin-bottom: 40px;
+  }
+  .hero-section{
+    flex-direction: column;
+  }
+  .book{
+    margin-right: 100px;
+    width: 50%;
+    font-size: medium;
+  }
+  .book h4 {
+    font-size: small;
+  }
+  .book h1 h2{
+    font-size: medium;
+  }
+
+}
+
+/* Styles for screens with a maximum width of 480px (small smartphones) */
+@media (max-width: 480px) {
+  .author-avatar {
+    height: 140px; /* Further adjust the height for even smaller screens */
+    min-width: 100px;
+    width: 140;
+  }
 }
 :root {
   --red: #e55604;
@@ -349,7 +461,8 @@ a {
 }
 #author-img{
   max-width: 700px;
-  min-width: 500px;
+  /* min-width: 500px; */
+  top: -220px;
 }
 
 .site-footer1 .widgets-wrapper1 {
