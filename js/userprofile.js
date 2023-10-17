@@ -68,6 +68,7 @@ async function getUserData(id) {
         'Content-Type': 'application/json',
       },
       // You can include a request body if needed
+
       body: JSON.stringify({
         firstname: firstname2,
         lastname: lastname2,

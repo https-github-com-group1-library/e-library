@@ -205,6 +205,21 @@
 
     }
 
+    /* #file-input {
+        display: none;
+    } */
+    .labelforimg {
+        display: block;
+        width: 200px;
+        padding: 12px;
+        margin: 10px auto;
+        background-color: #E55604;
+        color: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+
+    }
+
     .cont-logout {
         padding: 40px;
     }
