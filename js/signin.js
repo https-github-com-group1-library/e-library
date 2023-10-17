@@ -102,17 +102,6 @@ document.getElementById('signin').addEventListener('click', async function (even
                             return response.json();
                         })
                         .then(responseJson => {
-
-                            // const userId = responseJson[UiD2].email;
-
-                            // console.log(userId);
-                            // UiD2++;
-                            // console.log(UiD2);
-                            // Save the ID in sessionStorage
-                            // sessionStorage.setItem('userId', userUID);
-                            // const userData = responseJson[UiD2];
-                            // UiD2++;
-                            // const userJSON = JSON.stringify(userData);
                         })
 
 
@@ -122,7 +111,7 @@ document.getElementById('signin').addEventListener('click', async function (even
                 showInvalidMsg("User data not found.");
             }
             setTimeout(() => {
-                window.location.href = "../index.html"; // Navigate to the homepage here
+                window.location.href = "../index.html";
             }, 1100);
 
         })
