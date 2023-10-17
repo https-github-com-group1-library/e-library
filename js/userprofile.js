@@ -120,9 +120,65 @@ async function getUserData(id) {
 
   function favorite(){
     document.getElementById('form-profile').style.display='none';
+    displayFav();
   }
 
   function details(){
     document.getElementById('form-profile').style.display="block";
-  }
-  
+  }  
+
+  const userSession = sessionStorage. getItem('userId');
+
+  function displayFav() {
+    let info, favorites;
+
+    let books;
+    fetch('http://localhost:3000/books')
+        .then(response => response.json())
+        .then(json => {
+            books = json;
+            console.log(books);
+
+            // Fetch favorites inside the books fetch
+            fetch('http://localhost:3000/favourite')
+                .then(response => response.json())
+                .then(json => {
+                    info = json;
+                    console.log(info);
+
+                    // Process favorites inside the favorites fetch
+                    favorites = [];
+                    if (info.length !== 0) {
+                        info.forEach(element => {
+                            if (element.user == userSession) {
+                                favorites.push(element);
+                            }
+                        });
+                    }
+
+                    document.getElementById('favSection').innerHTML = '<ul id="cards"></ul>';
+                    console.log(favorites);
+                    if (favorites.length !== 0) {
+                        favorites.forEach(element => {
+                            document.getElementById('cards').innerHTML +=
+                                `<li class="card" id="favCard" onclick="window.location='/HTML/book-details.html?id=${element.id}'">
+                                    <div class="text-center">
+                                        <img src="${books[element.id].image}" class="card-img-top mb-3" alt="${books[element.id].title}" style="height: 200px">
+                                        <div class="content-container px-3">
+                                            <div class="d-flex justify-content-between">
+                                                <h3 class="card-title" style="height: 52px; overflow: hidden;">Title: ${books[element.id].title}</h3>
+                                                <a id="fav" onclick="deleteFav(${books[element.id].id}, event)" style="text-decoration: none; color: #E55604;"><i class="fav-icon fas fa-heart"></i></a>
+                                            </div>
+                                            <div class="card-content">
+                                                <p style="height: 48px">Author: ${books[element.id].author}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>`;
+                        });
+                    }
+                })
+                .catch(error => console.error('Error fetching favorites:', error));
+        })
+        .catch(error => console.error('Error fetching books:', error));
+}

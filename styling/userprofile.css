@@ -341,6 +341,15 @@ a {
     }
 }
 
+
+
+.card{
+    width: 50%;
+}
+.card div{
+    width: fit-content;
+}
+
 .creator1 {
     position: fixed;
     right: 0;
