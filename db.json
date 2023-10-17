@@ -746,15 +746,11 @@
     {
       "user": "tWAur1nDircgiPFeV9Vfkj779eC2",
       "id": 14
+    },
+    {
+      "user": "SQTmeFm2phP4k2kvTlz7wdLk4m73",
+      "id": 13
     }
   ],
-  "data": [
-    {
-      "firstname": "Hakuna",
-      "lastname": "Batata",
-      "address": "Address: Zarqa",
-      "email": "hakunabatata@gmail.com",
-      "id": 1
-    }
-  ]
+  "data": []
 }

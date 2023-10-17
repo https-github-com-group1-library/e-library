@@ -356,7 +356,9 @@ a {
     }
 }
 
-
+#favSection{
+    display: none;
+}
 
 .card{
     width: 50%;
