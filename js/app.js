@@ -275,6 +275,7 @@ function addToFav(id, index, section, event){
         
         }
     }
+    event.preventDefault();
 
 }
 
